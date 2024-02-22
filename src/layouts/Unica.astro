@@ -44,7 +44,7 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
   }
 
   hr {
-    border-color: var(--color-line);
+    border-color: var(--unica-color-line);
   }
 
   b {
@@ -58,6 +58,12 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     &:not(:first-child) {
       margin-top: 2rem;
     }
+  }
+
+  mark {
+    background: transparent;
+    color: var(--unica-color-accent);
+    font-weight: 600;
   }
 
   ._link {

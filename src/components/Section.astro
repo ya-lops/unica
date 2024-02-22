@@ -15,6 +15,14 @@ const { className } = Astro.props;
   :class="{'+intersect': show === true}"
 >
   {
+    Astro.slots.has("title") && (
+      <header class="unica-section__part +title">
+        <slot name="title" />
+      </header>
+    )
+  }
+
+  {
     Astro.slots.has("start") && (
       <div class="unica-section__part +start">
         <slot name="start" />
@@ -55,6 +63,17 @@ const { className } = Astro.props;
 
         &:has(.\+zero-padding) {
           padding: 0;
+        }
+      }
+
+      &.\+title {
+        grid-column: 1/-1;
+        padding: 5vw;
+        border-bottom: 1px solid var(--unica-color-divider);
+        text-align: center;
+
+        :global(header) {
+          font-size: 3vw;
         }
       }
     }

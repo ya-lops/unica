@@ -1,22 +1,22 @@
 [
   {
     "name": "Управление проектами",
-    "href": "#service01",
-    "image": ""
+    "href": "/service/project-management",
+    "image": "/images/service/project-management.jpg"
   },
   {
     "name": "Чистые помещения",
-    "href": "#service02",
-    "image": ""
+    "href": "/service/clean-rooms",
+    "image": "/images/service/clean-rooms.jpg"
   },
   {
     "name": "Проектирование",
-    "href": "#service03",
-    "image": ""
+    "href": "/service/design",
+    "image": "/images/service/design.jpg"
   },
   {
     "name": "Строительство",
-    "href": "#service04",
-    "image": ""
+    "href": "/service/construction",
+    "image": "/images/service/construction.jpg"
   }
 ]
