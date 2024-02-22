@@ -1,0 +1,39 @@
+---
+
+---
+
+<div class="unica-hero">
+  <div
+    class="_hero-logo"
+    x-data="{show: false}"
+    x-intersect:enter="show = true"
+    x-intersect:leave="show = false"
+    :class="{'+intersect': show === true}"
+  >
+    <img
+      class="unica-hero__logo "
+      src="/images/logo/logo-poster.png"
+    />
+  </div>
+  <hr />
+  <div class="_line-1">Основа репутации</div>
+  <div class="_line-2">– это качество наших работ</div>
+</div>
+
+<style lang="scss">
+  .unica-hero {
+    &__logo {
+      max-width: 300px;
+    }
+
+    ._line-1 {
+      font-size: 2.5vw;
+      font-weight: 500;
+    }
+
+    ._line-2 {
+      font-size: 2.5vw;
+      font-weight: 300;
+    }
+  }
+</style>

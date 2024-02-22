@@ -1,0 +1,36 @@
+---
+import DevLogo from "@/components/partial/DevLogo.astro";
+---
+
+<footer class="unica-footer">
+  <div class="unica-footer__item">
+    <img class="_logo" src="/images/logo/logo-main.png"/>
+  </div>
+  <div class="unica-footer__item">
+    © 2024. UNICA engineering ®
+  </div>
+  <div class="unica-footer__item"></div>
+  <div class="unica-footer__item"><DevLogo/></div>
+</footer>
+
+<style lang="scss">
+  .unica-footer {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    ._logo {
+      max-width: 133px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2vw;
+
+      &:not(:first-child) {
+        border-left: 1px solid var(--unica-color-divider);
+      }
+    }
+  }
+</style>

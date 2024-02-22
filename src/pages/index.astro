@@ -1,16 +1,103 @@
 ---
-
+import Unica from "@/layouts/Unica.astro";
+import Stats from "@/components/Stats.astro";
+import Advantages from "@/components/Advantages.astro";
+import Customers from "@/components/Customers.astro";
+import Section from "@/components/Section.astro";
+import Hero from "@/components/Hero.astro";
+import HeroList from "@/components/HeroList.astro";
+import Geo from "@/components/Geo.astro";
+import References from "@/components/References.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Unica>
+  <Section className="+hero">
+    <Fragment slot="start">
+      <Hero />
+    </Fragment>
+    <Fragment slot="end">
+      <HeroList />
+    </Fragment>
+  </Section>
+
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h2>кто мы</h2>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <h3>УНИКА инжиниринг</h3>
+      <p>
+        АО «УНИКА инжиниринг» – Российская компания, предоставляющая полный
+        комплекс услуг (разработка концептуальных решений, проектирование,
+        получение согласований, строительство и ввод в эксплуатацию) для
+        объектов здравоохранения, зданий промышленного и административного
+        назначения.
+      </p>
+      <p>
+        Компания «УНИКА инжиниринг» ведет свою историю с 2007 года. С самого
+        начала своей деятельности, объединив специалистов с многолетним
+        международным опытом проектирования инженерных систем, технологических и
+        строительных решений, «УНИКА инжиниринг» зарекомендовала себя как
+        надежный и профессиональный подрядчик и партнер на рынке проектирования
+        и создания комплексов с повышенными требованиями безопасности и чистоты.
+      </p>
+    </Fragment>
+  </Section>
+
+  <Section>
+    <Stats />
+  </Section>
+
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h2>почему выбирают нас?</h2>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <Advantages />
+    </Fragment>
+  </Section>
+
+  <Section>
+    <Customers />
+  </Section>
+
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h2>география</h2>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <Geo />
+    </Fragment>
+  </Section>
+
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h2>референции</h2>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <References/>
+    </Fragment>
+  </Section>
+
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h2>контакты</h2>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <p>Эл. почта: info@unica-eng.ru</p>
+      <p>Тел./Факс: +7 (495) 661-04-20</p>
+      <p>Адрес: 129272, РФ, г. Москва, тупик Трифоновский, д. 3, стр. 2</p>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3529ee22c0958c2139b4be3482cc1aa85cbfc3d95a5e0a9a923142346d8ed8c9&amp;source=constructor" width="650" height="500" frameborder="0"></iframe>
+    </Fragment>
+  </Section>
+</Unica>

@@ -1,0 +1,41 @@
+---
+import referencesData from "@/data/references.json";
+---
+
+<div class="unica-references">
+  {
+    referencesData.map((group) => (
+      <div class="unica-references__group">
+        <div class="unica-references__group-name">{group.groupName}</div>
+        <ul class="unica-references__list">
+          {group.groupItems.map((item) => (
+            <li class="unica-references__list-item">{item.name}</li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .unica-references {
+    &__group {
+      & + & {
+        margin-top: 2vw;
+      }
+    }
+
+    &__group-name {
+      font-size: 2vw;
+      color: var(--unica-color-accent);
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__list-item {
+      margin-bottom: .5rem;
+    }
+  }
+</style>

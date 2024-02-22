@@ -1,0 +1,57 @@
+---
+
+---
+
+<header class="unica-header">
+  <div class="_grid">
+    <div class="_cell unica-header__logo" style="opcity: 0;" :class="{'+intersect': show === true}">
+      <img class="_logo" src="/images/logo/logo-main.png" loading="lazy"/>
+    </div>
+    <div class="_cell"></div>
+    <div class="_cell">Услуги</div>
+    <div class="_cell">Лицензии</div>
+    <div class="_cell">Заказчики</div>
+    <div class="_cell">Вакансии</div>
+    <div class="_cell">Контакты</div>
+  </div>
+</header>
+
+<style lang="scss">
+  .unica-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: var(--unica-header-height);
+    border-bottom: 1px solid var(--unica-color-divider);
+    background: var(--unica-color-surface-0);
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: span 2;
+      padding: 0;
+      opacity: 0;
+      transform: translateY(10%);
+
+      // BUG срабатывает при первом запуске
+      body:has(._hero-logo:not(.\+intersect)) & {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition:
+          opacity 0.25s,
+          transform 0.25s;
+      }
+
+      img {
+        width: auto;
+        max-height: 30px;
+      }
+    }
+
+    ._cell {
+      font-size: 1vw;
+      font-weight: 500;
+    }
+  }
+</style>

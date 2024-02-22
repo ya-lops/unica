@@ -1,0 +1,19 @@
+:root {
+  --unica-color-accent: hsl(358, 85%, 52%);
+  --unica-color-accent-light: color-mix(in oklab, var(--unica-color-accent), #fff 10%);
+  --unica-color-accent-dark: color-mix(in oklab, var(--unica-color-accent), #000 30%);
+
+  --unica-color-text-primary: hsl(192, 19%, 10%);
+  --unica-color-text-primary-inverse: hsl(192, 19%, 90%);
+  --unica-color-text-secondary: hsl(192, 19%, 30%);
+
+  --unica-color-divider: hsl(0deg 0% 90%);
+
+  --unica-color-line: var(--unica-color-accent);
+  --unica-color-line-light: color-mix(in oklab, var(--unica-color-line), #fff 10%);
+  --unica-color-line-dark: color-mix(in oklab, var(--unica-color-line), #000 10%);
+
+  --unica-color-surface-0: hsl(0, 0%, 100%);
+
+  --unica-header-height: max(100px, 10vh);
+}

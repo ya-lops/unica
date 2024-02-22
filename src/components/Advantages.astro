@@ -1,0 +1,66 @@
+---
+import advantagesData from "@/data/advantages.json";
+
+const advantagesDataLength = advantagesData.length;
+---
+
+<div class="unica-advantages">
+  {
+    advantagesData.map((item) => (
+      <div class="unica-advantages__item">
+        <div class="_image" set:html={item.image} />
+        <div class="_text" set:html={item.text} />
+        <p class="_description" set:html={item.description} />
+        {
+          item.href && <a class="_link" href={item.href}>подробнее</a>
+        }
+      </div>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  .unica-advantages {
+    display: grid;
+    grid-template-columns: 100%;
+
+    &__item {
+      display: flex;
+      flex-flow: column;
+      // align-items: center;
+      gap: 1rem;
+      padding-block: 5vw;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--unica-color-divider);
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      ._text {
+        max-width: 50%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-wrap: balance;
+        color: var(--unica-color-accent);
+      }
+
+      ._image {
+        display: flex;
+        align-items: center;
+        font-size: 5rem;
+        color: var(--unica-color-accent);
+      }
+
+      ._description {
+        text-wrap: balance;
+      }
+    }
+  }
+</style>

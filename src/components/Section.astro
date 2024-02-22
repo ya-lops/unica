@@ -1,0 +1,62 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"section"> {
+  className?: string;
+}
+const { className } = Astro.props;
+---
+
+<section
+  class:list={["unica-section", className]}
+  x-data="{show: false}"
+  x-intersect:enter="show = true"
+  x-intersect:leave="show = false"
+  :class="{'+intersect': show === true}"
+>
+  {
+    Astro.slots.has("start") && (
+      <div class="unica-section__part +start">
+        <slot name="start" />
+      </div>
+    )
+  }
+  <slot />
+  {
+    Astro.slots.has("end") && (
+      <div class="unica-section__part +end">
+        <slot name="end" />
+      </div>
+    )
+  }
+</section>
+
+<style lang="scss">
+  .unica-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    border-bottom: 1px solid var(--unica-color-divider);
+
+    &__part {
+      &.\+start {
+        position: sticky;
+        top: var(--unica-header-height);
+        padding: 5vw;
+
+        :global(header) {
+          font-size: 3vw;
+        }
+      }
+
+      &.\+end {
+        padding: 5vw;
+        border-left: 1px solid var(--unica-color-divider);
+
+        &:has(.\+zero-padding) {
+          padding: 0;
+        }
+      }
+    }
+  }
+</style>

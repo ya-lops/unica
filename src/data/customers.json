@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Fresenius Medical Care",
+    "href": "https://www.freseniusmedicalcare.ru/",
+    "logo": "/images/customer/fmc.png"
+  },
+  {
+    "name": "Servier",
+    "href": "https://servier.ru/",
+    "logo": "/images/customer/servier.png"
+  },
+  {
+    "name": "Эндофарм",
+    "href": "https://endopharm.ru/",
+    "logo": "/images/customer/mez.png"
+  },
+  {
+    "name": "Фармстандарт",
+    "href": "https://pharmstd.ru/",
+    "logo": "/images/customer/phs.jpg"
+  },
+  {
+    "name": "Aptos",
+    "href": "https://aptos.ru/",
+    "logo": "/images/customer/aptos.jpg"
+  },
+  {
+    "name": "КрасФарма",
+    "href": "http://kraspharma.ru/",
+    "logo": "/images/customer/kras.png"
+  },
+  {
+    "name": "Sun Pharma",
+    "href": "https://www.sunpharma.com/russia",
+    "logo": "/images/customer/sun.png"
+  },
+  {
+    "name": "Группа компаний \"Лето\"",
+    "href": "https://leto-group.ru/",
+    "logo": "/images/customer/leto.png"
+  },
+  {
+    "name": "Самсон-Мед",
+    "href": "https://samsonmed.ru/",
+    "logo": "/images/customer/samson.jpg"
+  },
+  {
+    "name": "Изварино Фарма",
+    "href": "http://izvarino-pharma.ru/ru/",
+    "logo": "/images/customer/izvarino.jpg"
+  },
+  {
+    "name": "Пик Фарма",
+    "href": "https://www.pikfarma.ru/",
+    "logo": "/images/customer/pik.png"
+  },
+  {
+    "name": "Полисинтез",
+    "href": "https://www.polisintez.ru/",
+    "logo": "/images/customer/polisintez.png"
+  },
+  {
+    "name": "ОЗОН Фармацевтика",
+    "href": "https://ozonpharm.ru/",
+    "logo": "/images/customer/ozon.png"
+  },
+  {
+    "name": "Р-Фарм",
+    "href": "https://r-pharm.com/ru",
+    "logo": "/images/customer/r-farm.png"
+  },
+  {
+    "name": "НоваМедика",
+    "href": "https://novamedica.com/ru",
+    "logo": "/images/customer/nova.jpg"
+  },
+  {
+    "name": "Astellas Pharma Russia",
+    "href": "https://www.astellas.com/ru/",
+    "logo": ""
+  },
+  {
+    "name": "АлексАнн",
+    "href": "http://aleksann.ru/",
+    "logo": ""
+  },
+  {
+    "name": "НИЦ \"Курчатовский институт\"",
+    "href": "http://nrcki.ru/",
+    "logo": ""
+  },
+  {
+    "name": "ЗиО-Здоровье",
+    "href": "https://www.zio-zdorovie.ru/",
+    "logo": ""
+  },
+  {
+    "name": "Фармзащита",
+    "href": "https://www.atompharm.ru/",
+    "logo": ""
+  },
+  {
+    "name": "Проект SkQ",
+    "href": "https://skq.one/",
+    "logo": ""
+  },
+  {
+    "name": "Федеральный центр по проектированию и развитию объектов ядерной медицины",
+    "href": "https://fcpr.ru/",
+    "logo": ""
+  },
+  {
+    "name": "МосФарма",
+    "href": "https://mosfarma.ru/",
+    "logo": ""
+  },
+  {
+    "name": "Бионокс",
+    "href": "https://www.bionox.ru/",
+    "logo": ""
+  },
+  {
+    "name": "ФГУП СКТБ Технолог",
+    "href": "http://sktb-technolog.ru/",
+    "logo": ""
+  },
+  {
+    "name": "Генериум",
+    "href": "https://www.generium.ru/",
+    "logo": ""
+  }
+]

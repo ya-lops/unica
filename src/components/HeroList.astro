@@ -1,0 +1,99 @@
+---
+
+---
+
+<ul class="unica-hero-list +zero-padding">
+  <li>
+    <div class="_image">
+      <img src="/images/hero/serdix.jpg" />
+    </div>
+    <div class="_name">Сердикс</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/aleksann.jpg" />
+    </div>
+    <div class="_name">АлексАнн</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/mitotech.jpg" />
+    </div>
+    <div class="_name">Митотех</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/mez.jpg" />
+    </div>
+    <div class="_name">Московский эндокринный завод</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/sotex.jpg" />
+    </div>
+    <div class="_name">Сотекс</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/kphk.jpg" />
+    </div>
+    <div class="_name">Карагандинский фармацевтический комплекс</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/hero/vpc.jpg" />
+    </div>
+    <div class="_name">Воронежский перинатальный центр</div>
+  </li>
+</ul>
+
+<style lang="scss">
+  .unica-hero-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      height: 33vh;
+      overflow: clip;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--unica-color-divider);
+      }
+
+      &:hover {
+        outline: 2px solid var(--unica-color-accent);
+        outline-offset: -10px;
+      }
+    }
+
+    li:nth-child(odd) {
+      ._name {
+        order: -1;
+        border-right: 1px solid var(--unica-color-divider);
+      }
+    }
+
+    li:nth-child(even) {
+      ._image {
+        border-right: 1px solid var(--unica-color-divider);
+      }
+    }
+
+    ._name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1vw;
+      font-size: 2vw;
+      font-weight: 500;
+      text-align: center;
+      text-wrap: balance;
+    }
+
+    ._image {
+    }
+  }
+</style>

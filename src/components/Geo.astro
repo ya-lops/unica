@@ -1,0 +1,81 @@
+---
+
+---
+<ul class="unica-geo +zero-padding">
+  <li>
+    <div class="_image">
+      <img src="/images/geo/flag-rus.jpg" />
+    </div>
+    <div class="_name">Россия</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/geo/flag-kz.png" />
+    </div>
+    <div class="_name">Казахстан</div>
+  </li>
+  <li>
+    <div class="_image">
+      <img src="/images/geo/flag-georgia.png" />
+    </div>
+    <div class="_name">Грузия</div>
+  </li>
+</ul>
+
+<style lang="scss">
+  .unica-geo {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      height: 33vh;
+      overflow: clip;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--unica-color-divider);
+      }
+
+      &:hover {
+        outline: 2px solid var(--unica-color-accent);
+        outline-offset: -10px;
+      }
+    }
+
+    li:nth-child(odd) {
+      ._name {
+        order: -1;
+        border-right: 1px solid var(--unica-color-divider);
+      }
+    }
+
+    li:nth-child(even) {
+      ._image {
+        border-right: 1px solid var(--unica-color-divider);
+      }
+    }
+
+    ._name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2vw;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    ._image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: auto;
+        max-height: 150px;
+        border: 1px solid var(--unica-color-divider);
+      }
+    }
+  }
+</style>

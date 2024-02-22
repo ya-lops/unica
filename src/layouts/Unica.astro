@@ -1,0 +1,88 @@
+---
+import "@/styles/index.scss";
+import Meta from "@/components/app/Meta.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import YandexMetrika from "@/components/app/YandexMetrika.astro";
+import FooterScripts from "@/components/app/FooterScripts.astro";
+---
+
+<!doctype html>
+<html lang="ru" id="unica">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UNICA engineering</title>
+    <Meta />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+    <FooterScripts />
+    <YandexMetrika />
+  </body>
+</html>
+
+<style lang="scss" is:global>
+  body {
+    background-color: var(--unica-color-surface-0);
+    color: var(--color-text-primary);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Montserrat";
+  }
+
+  hr {
+    border-color: var(--color-line);
+  }
+
+  b {
+    font-weight: 500;
+    color: var(--unica-color-accent-dark);
+  }
+
+  p {
+    line-height: 150%;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  ._link {
+    color: var(--unica-color-accent);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--unica-color-accent-light);
+      text-decoration: underline;
+    }
+  }
+
+  ._grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  ._cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+  }
+
+  ._cell:not(:first-child) {
+    border-left: 1px solid var(--unica-color-divider);
+  }
+</style>

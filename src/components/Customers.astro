@@ -1,0 +1,44 @@
+---
+import customersData from "@/data/customers.json";
+---
+
+<div class="unica-customers">
+  {
+    customersData.slice(0,15).map(customer => (
+      <a class="unica-customers__item" href={customer.href} rel="nofollow" title="Перейти">
+        <img class="_image" src={customer.logo} alt="" />
+      </a>
+    ))
+  }
+
+  <a class="unica-customers__item _link" href="#allCustomers">смотреть все</a>
+</div>
+
+<style lang="scss">
+  .unica-customers {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0,1fr));
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      box-shadow: 0 1px 0 var(--unica-color-divider);
+
+      &:not(:first-child) {
+        border-left: 1px solid var(--unica-color-divider);
+      }
+
+      &:hover {
+        outline: 2px solid var(--unica-color-accent);
+        outline-offset: -10px;
+      }
+
+      ._image {
+        width: auto;
+      }
+    }
+  }
+</style>
