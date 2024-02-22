@@ -22,7 +22,7 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     <title>UNICA engineering</title>
     <Meta />
   </head>
-  <body>
+  <body x-data="{showLogo: false}" :class="{'+showLogo': showLogo === true}">
     <Header />
     <slot />
     <Footer />

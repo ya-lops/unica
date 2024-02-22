@@ -5,10 +5,8 @@
 <div class="unica-hero">
   <div
     class="_hero-logo"
-    x-data="{show: false}"
-    x-intersect:enter="show = true"
-    x-intersect:leave="show = false"
-    :class="{'+intersect': show === true}"
+    x-intersect:enter="showLogo = false"
+    x-intersect:leave="showLogo = true"
   >
     <img
       class="unica-hero__logo "
