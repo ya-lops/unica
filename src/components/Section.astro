@@ -45,35 +45,65 @@ const { className } = Astro.props;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: start;
     border-bottom: 1px solid var(--unica-color-divider);
+    overflow: clip;
+
+    @media (width < 768px) {
+      display: grid;
+      grid-template-columns: 100%;
+    }
 
     &__part {
       &.\+start {
-        position: sticky;
-        top: var(--unica-header-height);
-        padding: 5vw;
+        padding: var(--unica-padding-5);
+
+        @media (width < 786px) {
+          :not(.\+hero) > & {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+          }
+        }
+
+        @media (width > 768px) {
+          position: sticky;
+          top: var(--unica-header-height);
+          text-align: right;
+        }
 
         :global(header) {
-          font-size: 3vw;
+          font-size: var(--unica-fz-3);
         }
       }
 
       &.\+end {
-        padding: 5vw;
-        border-left: 1px solid var(--unica-color-divider);
+        padding: var(--unica-padding-5);
 
-        &:has(.\+zero-padding) {
-          padding: 0;
+        @media (width > 768px) {
+          border-left: 1px solid var(--unica-color-divider);
+
+          &:has(.\+zero-padding) {
+            padding: 0;
+          }
         }
       }
 
       &.\+title {
         grid-column: 1/-1;
-        padding: 5vw;
-        border-bottom: 1px solid var(--unica-color-divider);
+        padding: var(--unica-padding-5);
         text-align: center;
 
+        @media (width < 786px) {
+          position: sticky;
+          top: 0;
+          z-index: 5;
+        }
+
+        @media (width > 786px) {
+          border-bottom: 1px solid var(--unica-color-divider);
+        }
+
         :global(header) {
-          font-size: 3vw;
+          font-size: var(--unica-fz-3);
         }
       }
     }

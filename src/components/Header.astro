@@ -2,7 +2,7 @@
 
 ---
 
-<header class="unica-header">
+<header class="unica-header" transition:animate="none">
   <div class="_grid">
     <div class="_cell unica-header__logo">
       <img class="_logo" src="/images/logo/logo-main.png" loading="lazy" />
@@ -25,17 +25,24 @@
     border-bottom: 1px solid var(--unica-color-divider);
     background: var(--unica-color-surface-0);
 
+    @media (width < 641px) {
+      display: none;
+    }
+
     &__logo {
       display: flex;
       align-items: center;
       justify-content: center;
       grid-column: span 2;
       padding: 0;
-      opacity: 0;
-      transform: translateY(10%);
-      transition:
-        opacity 0.25s,
-        transform 0.25s;
+
+      :global(.\+homepage) & {
+        opacity: 0;
+        transform: translateY(10%);
+        transition:
+          opacity 0.25s,
+          transform 0.25s;
+      }
 
       :global(.\+showLogo) & {
         opacity: 1;

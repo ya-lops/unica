@@ -1,0 +1,31 @@
+---
+import Unica from "@/layouts/Unica.astro";
+import Section from "@/components/Section.astro";
+import Contacts from "@/components/Contacts.astro";
+---
+
+<Unica>
+  <Section>
+    <Fragment slot="start">
+      <header>
+        <h1 transition:name="service-title-4">строительство</h1>
+      </header>
+    </Fragment>
+    <Fragment slot="end">
+      <img src="/images/service/construction.jpg" transition:name="service-image-4" alt="">
+      <p>«УНИКА инжиниринг» осуществляет строительство, реконструкцию и капитальный ремонт:</p>
+      <ul>
+        <li>объектов здравоохранения;</li>
+        <li>объектов промышленного назначения (фармацевтические производства, пищевая промышленность и др.);</li>
+        <li>объектов использующих радиационные источники;</li>
+        <li>административных зданий;</li>
+        <li>объектов складского назначения;</li>
+        <li>объектов общественного питания.</li>
+      </ul>
+      <p>Наша компания выполняет полный комплекс работ по строительству и реконструкции фармацевтических производств по стандартам GMP на основе собственных технических решений или по проектам Заказчика.</p>
+      <p>Мы гарантируем своим заказчикам соблюдение всех сроков и нормативных требований.</p>
+    </Fragment>
+  </Section>
+
+  <Contacts/>
+</Unica>

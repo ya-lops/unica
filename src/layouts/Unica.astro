@@ -1,10 +1,17 @@
 ---
+interface Props {
+  className?: string;
+}
+
 import "@/styles/index.scss";
+import { ViewTransitions } from 'astro:transitions';
 import Meta from "@/components/app/Meta.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import YandexMetrika from "@/components/app/YandexMetrika.astro";
 import FooterScripts from "@/components/app/FooterScripts.astro";
+
+const {className} = Astro.props;
 ---
 
 <!doctype html>
@@ -21,8 +28,9 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNICA engineering</title>
     <Meta />
+    <ViewTransitions />
   </head>
-  <body x-data="{showLogo: false}" :class="{'+showLogo': showLogo === true}">
+  <body class:list={[className]} x-data="{showLogo: false}" :class="{'+showLogo': showLogo === true}">
     <Header />
     <slot />
     <Footer />
@@ -36,7 +44,7 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     background-color: var(--unica-color-surface-0);
     color: var(--color-text-primary);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1vw;
+    font-size: var(--unica-fz-body);
     line-height: 1.25;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -58,6 +66,11 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     &:not(:first-child) {
       margin-top: 2rem;
     }
+  }
+
+  ::selection {
+    background: var(--unica-color-accent);
+    color: var(--unica-color-text-primary-inverse);
   }
 
   mark {
@@ -85,7 +98,7 @@ import FooterScripts from "@/components/app/FooterScripts.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2vw;
+    padding: var(--unica-padding-2);
   }
 
   ._cell:not(:first-child) {

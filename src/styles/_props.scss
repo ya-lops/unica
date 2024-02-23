@@ -16,4 +16,9 @@
   --unica-color-surface-0: hsl(0, 0%, 100%);
 
   --unica-header-height: max(100px, 10vh);
+
+  --unica-padding-1: max(1vw, 1rem);
+  --unica-padding-2: max(2vw, 2rem);
+  --unica-padding-5: clamp(2rem, 5vw, 3rem); //max(5vw, 2rem);
+  --unica-padding-15: clamp(3rem, 15vw, 8rem);
 }

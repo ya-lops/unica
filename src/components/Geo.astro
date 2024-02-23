@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <ul class="unica-geo +zero-padding">
   <li>
     <div class="_image">
@@ -28,32 +29,41 @@
     margin: 0;
     padding: 0;
 
+    @media (width < 768px) {
+      display: grid;
+      grid-auto-rows: minmax(0, 1fr);
+    }
+
     li {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      height: 33vh;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      
       overflow: clip;
 
-      &:not(:last-child) {
-        border-bottom: 1px solid var(--unica-color-divider);
-      }
+      @media (width > 768px) {
+        height: 33vh;
 
-      &:hover {
-        outline: 2px solid var(--unica-color-accent);
-        outline-offset: -10px;
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--unica-color-divider);
+        }
       }
     }
 
     li:nth-child(odd) {
       ._name {
         order: -1;
-        border-right: 1px solid var(--unica-color-divider);
+
+        @media (width > 768px) {
+          border-right: 1px solid var(--unica-color-divider);
+        }
       }
     }
 
     li:nth-child(even) {
       ._image {
-        border-right: 1px solid var(--unica-color-divider);
+        @media (width > 768px) {
+          border-right: 1px solid var(--unica-color-divider);
+        }
       }
     }
 
@@ -61,7 +71,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2vw;
+      font-size: var(--unica-fz-2);
       font-weight: 500;
       text-align: center;
     }
@@ -73,6 +83,7 @@
 
       img {
         width: auto;
+        max-width: 200px;
         max-height: 150px;
         border: 1px solid var(--unica-color-divider);
       }

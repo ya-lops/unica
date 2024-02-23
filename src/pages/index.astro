@@ -10,9 +10,10 @@ import Geo from "@/components/Geo.astro";
 import References from "@/components/References.astro";
 import Banner from "@/components/Banner.astro";
 import Services from "@/components/Services.astro";
+import Contacts from "@/components/Contacts.astro";
 ---
 
-<Unica>
+<Unica className="+homepage">
   <Section className="+hero">
     <Fragment slot="start">
       <Hero />
@@ -116,21 +117,5 @@ import Services from "@/components/Services.astro";
     </Fragment>
   </Section>
 
-  <Section>
-    <Fragment slot="start">
-      <header>
-        <h2>контакты</h2>
-      </header>
-    </Fragment>
-    <Fragment slot="end">
-      <p>Эл. почта: info@unica-eng.ru</p>
-      <p>Тел./Факс: +7 (495) 661-04-20</p>
-      <p>Адрес: 129272, РФ, г. Москва, тупик Трифоновский, д. 3, стр. 2</p>
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A3529ee22c0958c2139b4be3482cc1aa85cbfc3d95a5e0a9a923142346d8ed8c9&source=constructor"
-        width="650"
-        height="500"
-        frameborder="0"></iframe>
-    </Fragment>
-  </Section>
+  <Contacts/>
 </Unica>

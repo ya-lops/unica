@@ -15,8 +15,14 @@ import DevLogo from "@/components/partial/DevLogo.astro";
 
 <style lang="scss">
   .unica-footer {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @media (width < 768px) {
+      padding-block: var(--unica-padding-1);
+    }
+
+    @media (width > 768px) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
     ._logo {
       max-width: 133px;
